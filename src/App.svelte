@@ -1,10 +1,10 @@
-
 <script lang="ts">
 	import Katex from 'svelte-katex';
 	export let name: string;
 	import Mod from "./Mod.svelte";
 	import Pwm from "./Pwm.svelte";
 	import PS from "./PS.svelte";
+	import BaudDiv from "./BaudDiv.svelte";
 </script>
 
 <main>
@@ -27,6 +27,8 @@
 		<h3 class="content">Resource Manual:</h3>
 		<div class="content1">	
 			<p>Hookup ALT# to PIN (Useful for finding mux value PORT->PCR[bit]): <a href="../ref.pdf#page=172" type="application/pdf" target="_blank">pg.172</a></p>
+			<p>PCR ALT MUX: <a href="../ref.pdf#page=194" type="application/pdf" target="_blank">pg.194</a></p>
+
 			<p>System Clock Gating Control Register 4: <a href="../ref.pdf#page=214" type="application/pdf" target="_blank">pg.214</a></p>
 			<p>System Clock Gating Control Register 5: <a href="../ref.pdf#page=216" type="application/pdf" target="_blank">pg.216</a></p>
 			<p>System Clock Gating Control Register 6: <a href="../ref.pdf#page=218" type="application/pdf" target="_blank">pg.218</a></p>
@@ -68,6 +70,9 @@
 			<li>GPIOA->PTOR - Toggle Output Register</li>
 			<li>GPIOA->PDIR - Data Input Register</li>
 		</ul>
+
+		<h2>RS232 Protocol: </h2>
+		<BaudDiv/>
 	</div>
 </main>
 
